@@ -1,0 +1,36 @@
+.all {
+    &__header {
+        @include headerText();
+    }
+}
+.person {
+    display: flex;
+    flex-direction: column;
+    &__header {
+        @include headerText();
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin: 0 30px 37px 0;
+        }
+    }
+    &__img {
+        margin-bottom: 10px;
+        max-width: 160px;
+        width: 100%;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: $black;
+    }
+}

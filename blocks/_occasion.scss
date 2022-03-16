@@ -1,0 +1,95 @@
+.event__text {
+    @include emptyBookmark();
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.grid{
+    display: grid;
+    grid-gap: 30px;
+    justify-self: center;
+}
+.grid__occasion{
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+}
+
+.occasion {
+    padding-bottom: 36px;
+    &__list {
+        display: flex;
+    }
+    &__item{
+        position: relative;
+        width: 100%;
+        max-width: 160px;
+        &-image{
+            margin-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+                .poster{
+                    -webkit-transition: .3s;
+                    transition: .3s;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                }
+            }
+        }
+    &__content {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        z-index: 1;
+        pointer-events: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start !important;
+            &-top{
+                width: 100%;
+                justify-content: space-between;
+            }
+            &-text{
+                color: $black;
+                width: 155px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-top: 10px;
+            }
+        }
+    &__users {
+        &-img{
+            margin-right: 5px;
+        }
+        span{
+            color: $white;
+            max-width: 58px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+.tikets__price {
+    &-text{
+        color: $white;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 15px;
+    }
+}
+.text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}

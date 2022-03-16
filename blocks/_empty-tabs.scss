@@ -1,0 +1,18 @@
+.people {
+    @include emptyBookmarkPosition ();
+        & p {
+        margin: 0;
+    }
+    &__text{
+        @include emptyBookmark();
+    }
+}
+.event {
+    @include emptyBookmarkPosition ();
+        & p {
+        margin: 0;
+    }
+    &__text{
+        @include emptyBookmark();
+    }
+}
