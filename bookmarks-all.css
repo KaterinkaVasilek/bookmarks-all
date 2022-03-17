@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -244,6 +245,11 @@ select {
   line-height: 22px;
   text-align: center;
   color: #222222;
+  max-width: 160px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .person__param {
@@ -292,91 +298,6 @@ select {
       grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
 }
 
-.occasion {
-  padding-bottom: 36px;
-}
-
-.occasion__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.occasion__item {
-  position: relative;
-  width: 100%;
-  max-width: 160px;
-}
-
-.occasion__item-image {
-  margin-bottom: 10px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-
-.occasion__item-image .poster {
-  -webkit-transition: .3s;
-  transition: .3s;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-
-.occasion__content {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  z-index: 1;
-  pointer-events: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start !important;
-      -ms-flex-align: start !important;
-          align-items: flex-start !important;
-}
-
-.occasion__content-top {
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.occasion__content-text {
-  color: #222222;
-  width: 155px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding-top: 10px;
-}
-
-.occasion__users-img {
-  margin-right: 5px;
-}
-
-.occasion__users span {
-  color: #FFFFFF;
-  max-width: 58px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .tikets__price-text {
   color: #FFFFFF;
   font-size: 14px;
@@ -388,6 +309,7 @@ select {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  word-break: break-word;
 }
 
 .events__card {
@@ -433,6 +355,18 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.events__content-link p {
+  margin: 0;
+  /* Убираем внешний отступ */
+  -webkit-line-clamp: 2;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
 }
 
 .events__content-top {

@@ -35,6 +35,11 @@
         line-height: 22px;
         text-align: center;
         color: $black;
+        max-width: 160px;
+        -webkit-line-clamp: 1;
+        display: -webkit-box; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     &__param {
         display: flex;
