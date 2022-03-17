@@ -10,7 +10,7 @@
     grid-gap: 30px;
     justify-self: center;
 }
-.grid__occasion{
+.grid__events{
     grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
 }
 
@@ -92,4 +92,44 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+}
+
+.events__card{
+    max-width: 160px;
+    width: 100%;
+    &-image{
+        margin-bottom: 10px;
+        position: relative;
+    }
+}
+.events{
+    &__content{
+        pointer-events: none;
+        position: absolute;
+        padding: 10px;
+        bottom: 0;
+        z-index: 3;
+        right: 0;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start !important;
+        &-link{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        &-top{
+            width: 100%;
+            justify-content: space-between;
+        }
+        &-text{
+            color: $black;
+        }
+    }
+    &__users span{
+        color: $white;
+    }
 }

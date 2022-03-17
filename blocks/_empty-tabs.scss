@@ -1,13 +1,10 @@
 .people {
-    @include emptyBookmarkPosition ();
-        & p {
-        margin: 0;
-    }
-    &__text{
-        @include emptyBookmark();
-    }
+    height: 530px;
 }
 .event {
+    height: 530px;
+}
+.bookmarks__content-empty {
     @include emptyBookmarkPosition ();
         & p {
         margin: 0;
