@@ -127,6 +127,8 @@
         }
         &-text{
             color: $black;
+            overflow-wrap: break-word;
+            align-self: center;
         }
     }
     &__users span{

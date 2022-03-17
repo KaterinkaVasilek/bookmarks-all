@@ -238,6 +238,7 @@ select {
 }
 
 .person__text {
+  overflow-wrap: break-word;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -443,6 +444,10 @@ select {
 
 .events__content-text {
   color: #222222;
+  overflow-wrap: break-word;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .events__users span {
